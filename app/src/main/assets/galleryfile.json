@@ -1,0 +1,39 @@
+{  
+   "data":{  
+      "gallery_details":{  
+         "1":{  
+            "gallery_id":"2f0f20ae-446d-4b62-8e13-4b65de0ad1fe",
+            "description":"new Yer",
+            "title":"Diwali",
+            "added_datetime":"2019-12-11T07:58:59.157Z",
+            "added_by":"David Warner",
+            "updated_datetime":null,
+            "gallery_image":{  
+               "1":{  
+                  "gallery_description":"New Year in Bangalore",
+                  "gallery_image":"varadhi_smartech/school/Gallery/0_XKC82wg.png"
+               }
+            }
+         },
+         "2":{  
+            "gallery_id":"0e0afa31-d6ae-466f-9aa6-47a273e655e1",
+            "description":"Durga Puja ",
+            "title":"Dushera",
+            "added_datetime":"2019-12-11T08:04:17.637Z",
+            "added_by":"David Warner",
+            "updated_datetime":null,
+            "gallery_image":{  
+               "1":{  
+                  "gallery_description":"Durga Puja 2019",
+                  "gallery_image":"varadhi_smartech/school/Gallery/0_8trd9wF.png"
+               }
+            }
+         }
+      }
+   },
+   "message":"Details of school gallery",
+   "status":"Success",
+   "status_code":200
+}
+
+

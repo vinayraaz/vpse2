@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Ll_normal_vtl"
+    android:id="@+id/ll_row"
+    >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/dp2"
+        app:cardCornerRadius="2dp"
+        android:layout_margin="@dimen/dp5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/Ll_normal_htl"
+                android:minHeight="@dimen/dp30"
+                android:gravity="center"
+                android:background="#F1F3F4"
+                android:paddingLeft="@dimen/dp5"
+                android:baselineAligned="false">
+
+                <TextView
+                    style="@style/tv_weight_normal"
+                    android:text="Class :"/>
+
+                <TextView
+                    style="@style/tv_weight_normal"
+                    android:id="@+id/tv_class"
+                    android:text="2A"/>
+
+                <TextView
+                    style="@style/tv_weight_normal"
+                    android:text="Subject :"/>
+
+                <TextView
+                    style="@style/tv_weight_normal"
+                    android:id="@+id/tv_Subject"
+                    android:gravity="start"
+                    android:text="English"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Ll_normal_htl"
+                android:minHeight="@dimen/dp30"
+                android:paddingLeft="@dimen/dp5"
+                android:baselineAligned="false">
+
+                <TextView
+                    style="@style/tv_weight_normal"
+                    android:text="Exam Type :"
+                    android:layout_weight="0.5"/>
+
+                <TextView
+                    style="@style/tv_weight_normal"
+                    android:layout_gravity="start"
+                    android:id="@+id/tv_ExamType"
+                    android:text="Unit Test"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Ll_normal_htl"
+                android:paddingLeft="@dimen/dp5"
+                android:minHeight="@dimen/dp30">
+
+                <TextView
+                    style="@style/tv_weight_normal"
+                    android:text="Syllabus Title :"
+                    android:layout_weight="0.7"/>
+
+                <TextView
+                    style="@style/tv_weight_normal"
+                    android:id="@+id/tv_SyllabusTitle"
+                    android:text="Syllabus Title"/>
+
+                <ImageView
+                    style="@style/imgvw_normal"
+                    android:id="@+id/img_Attachment"
+                    android:padding="@dimen/dp4"
+                    android:background="@drawable/ic_attach_file_white"
+                    android:backgroundTint="@color/green"
+                    />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+</LinearLayout>

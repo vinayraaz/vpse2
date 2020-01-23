@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/dp10"
+    android:elevation="@dimen/dp8"
+    android:layout_margin="@dimen/dp3">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:gravity="center|left"
+                android:textColor="@color/black"
+                android:minHeight="@dimen/dp25"
+                android:text="Leave Type " />
+
+            <TextView
+                android:id="@+id/leave_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".55"
+                android:gravity="center|left"
+                android:minHeight="@dimen/dp25" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".45"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:minHeight="@dimen/dp25"
+                android:text="Subject " />
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".55"
+                android:gravity="center|left"
+                android:minHeight="@dimen/dp25" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:minHeight="@dimen/dp25"
+                android:text="From Date " />
+
+            <TextView
+                android:id="@+id/from_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:gravity="center|left"
+                android:minHeight="@dimen/dp25" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:textColor="@color/black"
+                android:gravity="center|left"
+                android:minHeight="@dimen/dp25"
+                android:text="To Date " />
+
+            <TextView
+                android:id="@+id/to_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:gravity="center|left"
+                android:minHeight="@dimen/dp25" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp15"
+            android:minHeight="@dimen/dp25"
+            android:text="Message" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+android:paddingLeft="20dp"
+            android:minHeight="@dimen/dp25" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+</LinearLayout>

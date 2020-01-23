@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            style="@style/Rl_normal"
+            android:layout_marginTop="@dimen/dp5">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                style="@style/imgvw_normal"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                android:contentDescription="@string/image" />
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/tv_normal"
+                android:text="Leave"
+                android:layout_marginLeft="@dimen/dp30"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivBack"
+                android:layout_toEndOf="@id/ivBack"
+                android:layout_marginStart="@dimen/dp30" />
+
+            <Button
+                android:id="@+id/submit"
+                style="@style/button_normal"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/send"
+                android:padding="@dimen/dp5"
+                android:drawableLeft="@drawable/send"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                tools:ignore="RelativeOverlap,RtlHardcoded"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/scrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/Ll_normal_vtl"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginBottom="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10">
+
+                <LinearLayout
+                    style="@style/Ll_normal_htl"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        style="@style/Ll_weight_htl"
+                        android:gravity="center">
+
+                        <in.varadhismartek.patashalaerp.GeneralClass.CircleImageView
+                            style="@style/circleimagevw_normal"
+                            android:id="@+id/img_profile"
+                            android:layout_width="@dimen/dp80"
+                            android:layout_height="@dimen/dp80"
+                            android:padding="@dimen/dp4"
+                            android:background="@drawable/circle_solid_green"
+                            android:src="@drawable/circle_select"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1.5"
+                        style="@style/Ll_weight_vtl">
+
+                        <TextView
+                            style="@style/tv_normal"
+                            android:id="@+id/emp_nameview"
+                            android:layout_margin="@dimen/dp5"
+                            android:textColor="@color/white"
+                            android:text="@string/name"/>
+
+                        <TextView
+                            style="@style/tv_normal"
+                            android:id="@+id/emp_id"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:textColor="@color/white"
+                            tools:ignore="SpUsage" />
+
+                        <TextView
+                            style="@style/tv_normal"
+                            android:id="@+id/c_date"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:textColor="@color/white"
+                            android:text="@string/Applied_Date" />
+
+                        <TextView
+                            style="@style/tv_normal"
+                            android:id="@+id/c_time"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:textColor="@color/white"
+                            android:text="@string/Applied_Date"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/Ll_weight_vtl"
+                        android:layout_weight="1.5">
+
+                        <TextView
+                            android:id="@+id/empname"
+                            style="@style/tv_normal"
+                            android:layout_margin="@dimen/dp5"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/empid"
+                            style="@style/tv_normal"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/c_date_text"
+                            style="@style/tv_normal"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/c_time_text"
+                            style="@style/tv_normal"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Ll_normal_vtl">
+
+                <LinearLayout
+                    style="@style/Ll_normal_vtl"
+                    android:gravity="center"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        style="@style/Ll_normal_htl"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/dp5"
+                            style="@style/Ll_normal_vtl">
+
+                            <Spinner
+                                android:id="@+id/leave_types"
+                                style="@style/spinner"
+                                android:textAlignment="center"
+                                android:spinnerMode="dropdown" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/permission_layout_date"
+                            style="@style/Ll_normal_vtl"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dp5"
+                            android:layout_weight="1"
+                            android:visibility="invisible">
+
+                            <Spinner
+                                android:id="@+id/leave_permission"
+                                style="@style/spinner"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/spinnerbackground"
+                                android:spinnerMode="dropdown"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/leave_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/Leave_Type"
+                        android:textColor="#817f7f"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/attach_sick_img_layout"
+                        style="@style/Ll_normal_htl"
+                        android:layout_margin="@dimen/dp5"
+                        android:visibility="gone">
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardViewStyle"
+                            app:cardElevation="@dimen/dp5">
+
+                            <LinearLayout
+                                android:id="@+id/attach_layout"
+                                style="@style/Ll_normal_htl"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/upload_file_text"
+                                    style="@style/edittext_normal_weight"
+                                    android:background="@drawable/shape4"
+                                    android:hint="@string/upload_file_here"
+                                    android:padding="@dimen/dp5"
+                                    tools:ignore="Autofill,TextFields" />
+
+                                <ImageView
+                                    android:id="@+id/upload_file_img"
+                                    style="@style/imgvw_normal"
+                                    android:layout_gravity="center"
+
+                                    android:contentDescription="@string/image"/>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/date_displayer"
+                        style="@style/Ll_normal_htl">
+
+                        <LinearLayout
+                            style="@style/Ll_weight_htl"
+                            android:layout_margin="@dimen/dp5">
+
+                            <RelativeLayout
+                                android:id="@+id/leave_layout_start_date"
+                                style="@style/Rl_normal"
+                                android:background="@drawable/shape4">
+
+                                <TextView
+                                    android:id="@+id/from_date_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp35"
+                                    android:layout_marginEnd="@dimen/dp30"
+                                    android:layout_marginRight="@dimen/dp30"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp5"
+                                    android:text="@string/from_date" />
+
+                                <ImageView
+                                    style="@style/imgvw_normal"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="@dimen/dp1"
+                                    android:background="@drawable/backgroung"
+                                    android:padding="@dimen/dp5"
+                                    android:src="@drawable/ic_date_range_black_24dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:contentDescription="@string/image"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_weight_htl"
+                            android:layout_margin="@dimen/dp5">
+
+                            <RelativeLayout
+                                android:id="@+id/leave_layout_to_date"
+                                style="@style/Rl_normal"
+                                android:background="@drawable/shape4">
+
+                                <TextView
+                                    android:id="@+id/to_date_textview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp35"
+                                    android:layout_marginEnd="@dimen/dp30"
+                                    android:layout_marginRight="@dimen/dp30"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp5"
+                                    android:text="@string/to_date" />
+
+                                <ImageView
+                                    style="@style/imgvw_normal"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="@dimen/dp1"
+                                    android:background="@drawable/backgroung"
+                                    android:padding="@dimen/dp5"
+                                    android:src="@drawable/ic_date_range_black_24dp"
+                                    tools:ignore="RtlHardcoded"
+                                    android:contentDescription="@string/image"/>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/Ll_normal_vtl"
+                        android:background="@color/backgroundColor"
+                        android:padding="@dimen/dp5">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textiplayout_wmatch_hwrap">
+
+                            <EditText
+                                android:id="@+id/subject_edittext"
+                                style="@style/edittext_normal"
+                                android:layout_margin="@dimen/dp5"
+                                android:hint="Subject"
+                                android:inputType="textMultiLine"
+                                android:maxLength="100"
+                                android:maxLines="2"
+                                android:scrollHorizontally="false"
+                                android:singleLine="false"
+                                android:textSize="@dimen/sp14"
+                                tools:ignore="Autofill" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <TextView
+                            style="@style/tv_normal"
+                            android:layout_width="match_parent"
+                            android:layout_margin="@dimen/dp5"
+                            android:text="Message"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/message_edittext"
+                            style="@style/edittext_normal"
+                            android:layout_height="@dimen/dp75"
+                            android:layout_gravity="start"
+                            android:layout_margin="@dimen/dp5"
+                            android:background="@drawable/shape4"
+                            android:padding="@dimen/dp5"
+                            android:inputType="textCapSentences"
+                            android:gravity="start"
+                            android:focusableInTouchMode="true"
+                            android:textSize="@dimen/sp14"
+                            android:scrollHorizontally="false"
+                            android:singleLine="false"
+                            tools:ignore="Autofill,LabelFor,TextFields" />
+
+                        <TextView
+                            style="@style/tv_bothmatch"
+                            android:padding="@dimen/dp5"
+                            android:text="@string/Emergency_Contact_Details"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/textinputlaout_wmatch_hwrap">
+
+                        <EditText
+                            android:id="@+id/etDoorNo"
+                            style="@style/edittext_normal"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/door_no"
+
+                            android:textSize="@dimen/sp14"
+                            tools:ignore="Autofill,TextFields" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/textinputlaout_wmatch_hwrap">
+
+                        <EditText
+                            android:id="@+id/etStreet"
+                            style="@style/edittext_normal"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/street_name"
+                            android:textSize="@dimen/sp14"
+                            tools:ignore="Autofill,TextFields" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/textinputlaout_wmatch_hwrap">
+
+                        <EditText
+                            android:id="@+id/etLocality"
+                            style="@style/edittext_normal"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/locality"
+                            android:textSize="@dimen/sp14"
+                            tools:ignore="Autofill,TextFields" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/textinputlaout_wmatch_hwrap">
+
+                        <EditText
+                            android:id="@+id/etLandMark"
+                            style="@style/edittext_normal"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/landmark"
+                            android:textSize="@dimen/sp14"
+                            tools:ignore="Autofill,TextFields" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        style="@style/Ll_normal_htl"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight">
+
+                            <EditText
+                                android:id="@+id/etPinCode"
+                                style="@style/edittext_normal"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/pincode"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:textSize="@dimen/sp14"
+                                tools:ignore="Autofill" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight">
+
+                            <EditText
+                                android:id="@+id/etCity"
+                                style="@style/edittext_normal"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/city"
+                                android:inputType="textCapSentences"
+                                android:textSize="@dimen/sp14"
+                                tools:ignore="Autofill" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/Ll_normal_htl"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight">
+
+                            <EditText
+                                android:id="@+id/etState"
+                                style="@style/edittext_normal"
+                                android:focusableInTouchMode="true"
+                                android:hint="@string/state"
+                                android:inputType="text"
+                                android:textSize="@dimen/sp14"
+                                tools:ignore="Autofill" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight">
+
+                            <EditText
+                                android:id="@+id/etCountry"
+                                style="@style/edittext_normal"
+                                android:focusableInTouchMode="true"
+                                android:textSize="@dimen/sp14"
+                                android:hint="@string/country"
+                                android:inputType="textCapSentences"
+                                tools:ignore="Autofill" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/Ll_normal_htl"
+                        android:gravity="center">
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/ccp"
+                            style="@style/tv_normal"
+                            app:ccp_countryPreference="in"
+                            app:ccp_clickable="false"
+                            android:visibility="visible" />
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_wmatch_hwrap">
+
+                            <EditText
+                                android:id="@+id/etMobileNo"
+                                android:hint="@string/mobile_no"
+                                style="@style/edittext_normal"
+                                android:textSize="@dimen/sp14"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                tools:ignore="Autofill" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/tv_normal"
+                android:layout_margin="@dimen/dp5"
+                android:text="@string/Comment"
+                android:textStyle="bold"/>
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                android:layout_margin="@dimen/dp5"
+                app:cardBackgroundColor="@color/white"
+                android:background="@drawable/buttonbackgroundcolor"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp">
+
+                <EditText
+                    android:id="@+id/etComment"
+                    style="@style/edittext_normal"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_gravity="start"
+                    android:layout_margin="@dimen/dp5"
+                    android:background="@color/white"
+                    android:gravity="start"
+                    android:maxLength="150"
+                    android:maxLines="3"
+                    android:scrollHorizontally="false"
+                    android:singleLine="false"
+                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+
