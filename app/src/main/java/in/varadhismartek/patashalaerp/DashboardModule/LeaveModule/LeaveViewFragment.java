@@ -110,8 +110,6 @@ public class LeaveViewFragment extends Fragment implements View.OnClickListener 
         switch (leave_status){
 
             case "Pending":
-
-
                 iv_status_circle.setImageResource(R.drawable.ring_shape2);
 
                 break;
@@ -123,6 +121,7 @@ public class LeaveViewFragment extends Fragment implements View.OnClickListener 
 
             case "Rejected":
                 iv_status_circle.setImageResource(R.drawable.ring_shape4);
+               
 
                 break;
 

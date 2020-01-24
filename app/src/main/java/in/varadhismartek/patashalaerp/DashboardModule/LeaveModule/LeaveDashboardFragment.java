@@ -125,6 +125,7 @@ public class LeaveDashboardFragment extends Fragment implements View.OnClickList
 
             case R.id.iv_backBtn:
                 getActivity().onBackPressed();
+                getActivity().finish();
 
                 break;
 

@@ -124,7 +124,7 @@
                             android:layout_marginStart="@dimen/dp5"
                             android:layout_marginTop="@dimen/dp5"
                             android:textColor="@color/white"
-                            android:text="@string/Applied_Date"/>
+                            android:text="@string/Applied_Time"/>
 
                     </LinearLayout>
 
@@ -244,6 +244,8 @@
                                     android:background="@drawable/shape4"
                                     android:hint="@string/upload_file_here"
                                     android:padding="@dimen/dp5"
+                                    android:digits="@string/alphabetic"
+                                    android:inputType="textCapWords"
                                     tools:ignore="Autofill,TextFields" />
 
                                 <ImageView
@@ -371,8 +373,9 @@
                             android:layout_margin="@dimen/dp5"
                             android:background="@drawable/shape4"
                             android:padding="@dimen/dp5"
-                            android:inputType="textCapSentences"
                             android:gravity="start"
+                            android:digits="@string/alphabetic"
+                            android:inputType="textCapWords"
                             android:focusableInTouchMode="true"
                             android:textSize="@dimen/sp14"
                             android:scrollHorizontally="false"
@@ -395,7 +398,8 @@
                             style="@style/edittext_normal"
                             android:focusableInTouchMode="true"
                             android:hint="@string/door_no"
-
+                            android:digits="@string/alphabetic"
+                            android:inputType="number"
                             android:textSize="@dimen/sp14"
                             tools:ignore="Autofill,TextFields" />
 
@@ -410,6 +414,8 @@
                             android:focusableInTouchMode="true"
                             android:hint="@string/street_name"
                             android:textSize="@dimen/sp14"
+                            android:digits="@string/alphabetic"
+                            android:inputType="textCapWords"
                             tools:ignore="Autofill,TextFields" />
 
                     </android.support.design.widget.TextInputLayout>
@@ -422,6 +428,8 @@
                             style="@style/edittext_normal"
                             android:focusableInTouchMode="true"
                             android:hint="@string/locality"
+                            android:digits="@string/alphabetic"
+                            android:inputType="textCapWords"
                             android:textSize="@dimen/sp14"
                             tools:ignore="Autofill,TextFields" />
 
@@ -435,6 +443,8 @@
                             style="@style/edittext_normal"
                             android:focusableInTouchMode="true"
                             android:hint="@string/landmark"
+                            android:digits="@string/alphanumeric"
+                            android:inputType="textCapWords"
                             android:textSize="@dimen/sp14"
                             tools:ignore="Autofill,TextFields" />
 
@@ -467,7 +477,8 @@
                                 style="@style/edittext_normal"
                                 android:focusableInTouchMode="true"
                                 android:hint="@string/city"
-                                android:inputType="textCapSentences"
+                                android:digits="@string/alphabetic"
+                                android:inputType="textCapWords"
                                 android:textSize="@dimen/sp14"
                                 tools:ignore="Autofill" />
 
@@ -487,7 +498,8 @@
                                 style="@style/edittext_normal"
                                 android:focusableInTouchMode="true"
                                 android:hint="@string/state"
-                                android:inputType="text"
+                                android:digits="@string/alphabetic"
+                                android:inputType="textCapWords"
                                 android:textSize="@dimen/sp14"
                                 tools:ignore="Autofill" />
 
@@ -502,7 +514,8 @@
                                 android:focusableInTouchMode="true"
                                 android:textSize="@dimen/sp14"
                                 android:hint="@string/country"
-                                android:inputType="textCapSentences"
+                                android:digits="@string/alphabetic"
+                                android:inputType="textCapWords"
                                 tools:ignore="Autofill" />
 
                         </android.support.design.widget.TextInputLayout>

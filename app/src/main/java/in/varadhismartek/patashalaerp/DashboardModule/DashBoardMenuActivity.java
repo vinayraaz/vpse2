@@ -205,9 +205,9 @@ public class DashBoardMenuActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         // this.finish();
-        Intent intent = new Intent(DashBoardMenuActivity.this, DashboardActivity.class);
+       /* Intent intent = new Intent(DashBoardMenuActivity.this, DashboardActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-        finish();
+        finish();*/
     }
 }

@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -58,6 +59,7 @@ public class AdminLeaveListFragment extends Fragment {
 
     String empFname="", empLname="", empUUId, empPhoneNo, empAdhaarNo, empDept;
 FloatingActionButton fab;
+ImageView iv_backBtn;
     public AdminLeaveListFragment() {
         // Required empty public constructor
     }
@@ -83,7 +85,7 @@ FloatingActionButton fab;
 
 
         ArrayAdapter<String> adp = new ArrayAdapter<String>
-                (getActivity(), android.R.layout.simple_dropdown_item_1line, spnStatus);
+                (getActivity(), android.R.layout.simple_spinner_item, spnStatus);
         spn_Status.setAdapter(adp);
 
 
@@ -239,14 +241,16 @@ FloatingActionButton fab;
         spn_Status = view.findViewById(R.id.spn_Status);
         recycler_view = view.findViewById(R.id.recycler_view);
         fab = view.findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        iv_backBtn = view.findViewById(R.id.iv_backBtn);
+        fab.setVisibility(View.GONE);
+        iv_backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final DashBoardMenuActivity leaveView = (DashBoardMenuActivity) getActivity();
-               /* Bundle bundle = new Bundle();
-
-                bundle.putString("EMPLOYEE", "0");*/
-                leaveView.loadFragment(Constant.LEAVE_DASHBOARD_FRAGMENT, null);
+                getActivity().onBackPressed();
+               /* final DashBoardMenuActivity leaveView = (DashBoardMenuActivity) getActivity();
+                Bundle bundle = new Bundle();
+                bundle.putString("EMPLOYEE", "0");
+                leaveView.loadFragment(Constant.LEAVE_DASHBOARD_FRAGMENT, null);*/
             }
         });
 

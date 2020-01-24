@@ -156,7 +156,7 @@ public class LeaveApplyFragment extends Fragment implements View.OnClickListener
     private void setSpinnerForLeaveType() {
 
         spnList.add(0, "-Select Leave-");
-        CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(getActivity(), spnList, "Blue");
+        CustomSpinnerAdapter adapter = new CustomSpinnerAdapter(getActivity(), spnList, "Green");
         spleaveType.setAdapter(adapter);
     }
 
@@ -193,7 +193,7 @@ public class LeaveApplyFragment extends Fragment implements View.OnClickListener
         spleaveType = view.findViewById(R.id.leave_types);
         spSession = view.findViewById(R.id.leave_permission);
 
-        name = view.findViewById(R.id.empname);
+        name = view.findViewById(R.id.emp_nameview);
         id = view.findViewById(R.id.empid);
         date_view = view.findViewById(R.id.c_date_text);
         time_view = view.findViewById(R.id.c_time_text);

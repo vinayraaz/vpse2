@@ -122,22 +122,8 @@ public class LeaveAdapter extends RecyclerView.Adapter<LeaveViewHolder> {
 
 
 
-
-
-
-          /*  case Constant.RV_LEAVE_STATEMENT:
-                return new LeaveViewHolder(LayoutInflater.from(mContext)
-                        .inflate(R.layout.statement_table_row, viewGroup, false));
-
-            case Constant.RV_LEAVE_STATEMENT_NAME:
-                return new LeaveViewHolder(LayoutInflater.from(mContext)
-                        .inflate(R.layout.statement_type_row, viewGroup, false));
-
-
-            */
         }
 
-        //noinspection ConstantConditions RV_SCHOOL_LEAVE_BARRIER
         return null;
     }
 
@@ -188,12 +174,14 @@ public class LeaveAdapter extends RecyclerView.Adapter<LeaveViewHolder> {
                     public void onClick(View view) {
 
                         final DashBoardMenuActivity leaveView = (DashBoardMenuActivity) mContext;
+
                         Bundle bundle = new Bundle();
                         bundle.putString("leaveID", leaveList.get(position).getLeaveID());
                         bundle.putString("EMPUUID", leaveList.get(position).getEmpID());
                         bundle.putString("EMPLOYEE", "ADMIN_LEAVE");
                         Log.i("leaveList..getEmpID()**", "" + leaveList.get(position).getEmpID()
                                 + "**" + leaveList.get(position).getLeaveID());
+
                         leaveView.loadFragment(Constant.LEAVE_VIEW_FRAGMENT, bundle);
 
 
@@ -284,40 +272,7 @@ public class LeaveAdapter extends RecyclerView.Adapter<LeaveViewHolder> {
 
                 break;
 
-     /*       case Constant.RV_LEAVE_STATEMENT:
 
-                holder.tv_leaveType.setText(leaveList.get(position).getLeavetype());
-                holder.tv_totalLeave.setText(leaveList.get(position).getTotalLeave());
-                holder.tv_usedLeave.setText(leaveList.get(position).getUsedLeave());
-                holder.tv_leftLeave.setText(leaveList.get(position).getLeftLeave());
-
-                break;
-
-            case Constant.RV_LEAVE_STATEMENT_NAME:
-                holder.tv_leaveType.setText(leaveList.get(position).getLeavetype());
-                holder.view_color.setBackgroundResource(R.color.teacherPrimary);
-
-                holder.ll_row.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        updateChartData.setData(leaveList.get(position).getTotalLeave(),leaveList.get(position).getUsedLeave(),
-                                leaveList.get(position).getLeftLeave());
-                    }
-                });
-
-                break;*/
-
-            /*case Constant.RV_ADMIN_LEAVE_LIST:
-
-                holder.tv_applied_date.setText(empLeaveList.get(position).getAppliedDate());
-
-                LeaveAdapter adapter = new LeaveAdapter(empLeaveList.get(position).getLeaveList(),
-                        mContext,Constant.RV_ADMIN_LEAVE_NESTED_LIST);
-                holder.recycler_view.setLayoutManager(new LinearLayoutManager(mContext));
-                holder.recycler_view.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
-
-                break;*/
 
             case Constant.RV_LEAVE_ADMIN_LIST:
 
@@ -376,6 +331,7 @@ public class LeaveAdapter extends RecyclerView.Adapter<LeaveViewHolder> {
                         bundle.putString("EMPUUID", Constant.EMPLOYEE_ID);
                         bundle.putString("EMPLOYEE", "EMP_LEAVE");
                         Log.i("leaveList..getEmpID()**", "" + leaveList.get(position).getEmpID());
+
                         leaveView.loadFragment(Constant.LEAVE_VIEW_FRAGMENT, bundle);
 
 

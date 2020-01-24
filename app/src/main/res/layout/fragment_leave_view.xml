@@ -293,11 +293,9 @@
                         android:id="@+id/tvLeaveMsg"
                         style="@style/tv_normal"
                         android:layout_width="match_parent"
-
                         android:layout_marginTop="@dimen/dp8"
-                        android:minHeight="@dimen/dp40"
-                        android:padding="@dimen/dp5"
                         android:paddingLeft="@dimen/dp20"
+                        android:minHeight="@dimen/dp40"
                         android:text="Message Text"
                         android:textSize="@dimen/sp14"
                         tools:ignore="TextViewEdits" />
