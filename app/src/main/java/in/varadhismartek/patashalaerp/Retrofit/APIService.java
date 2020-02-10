@@ -1475,4 +1475,11 @@ session_to_date:2021-1-7*/
           @Field("class") String className,
           @Field("section") String section
   );
+
+  @FormUrlEncoded
+  @POST("get_employee_acount_details")
+  Call<Object> getEmployeeAccountDetails(
+          @Field("school_id") String school_id,
+          @Field("employee_uuid") String employee_uuid
+  );
 }

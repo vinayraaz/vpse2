@@ -75,7 +75,7 @@ public class Fragment_EmployeeView extends Fragment implements View.OnClickListe
     ArrayList<ProfileModel> achivementList;
     ArrayList<ProfileModel> sportsList;
     ArrayList<ProfileModel> childList;
-TextView tvLeave,tv_homework;
+TextView tvLeave,tv_homework,tv_account;
     public Fragment_EmployeeView() {
     }
 
@@ -144,6 +144,7 @@ TextView tvLeave,tv_homework;
         ll_docs.setOnClickListener(this);
         tvLeave.setOnClickListener(this);
         tv_homework.setOnClickListener(this);
+        tv_account.setOnClickListener(this);
     }
 
 
@@ -409,6 +410,7 @@ TextView tvLeave,tv_homework;
         tv_homework = view.findViewById(R.id.tv_homework);
         ll_employee = view.findViewById(R.id.ll_employee);
         tvNoRecords = view.findViewById(R.id.tvNorecords);
+        tv_account = view.findViewById(R.id.tv_account);
         // tvTitle.setText("Employee Profile ");
 
         mApiServicePatashala = ApiUtilsPatashala.getService();
@@ -557,8 +559,28 @@ TextView tvLeave,tv_homework;
         EmployeeActivity employeeActivity = (EmployeeActivity) getActivity();
         Bundle bundle;
         switch (v.getId()) {
-            case R.id.tv_leave:
+            case R.id.tv_account:
+                tv_account.setBackgroundResource(R.drawable.border_rect);
+                tvLeave.setBackgroundResource(R.drawable.border);
+                tv_homework.setBackgroundResource(R.drawable.border);
+                tv_attendance.setBackgroundResource(R.drawable.border);
+                ll_academic.setBackgroundResource(R.drawable.border);
+                ll_health.setBackgroundResource(R.drawable.border);
+                ll_docs.setBackgroundResource(R.drawable.border);
+                ll_health_view.setVisibility(View.GONE);
+                ll_docs_view.setVisibility(View.GONE);
+                ll_personal_view.setVisibility(View.GONE);
+                tv_attendance.setVisibility(View.VISIBLE);
+
+                 bundle = new Bundle();
+                bundle.putString("EMPUUID", empID);
+                bundle.putString("EMPLOYEE", "EMP_PAT_LEAVE");
+                employeeActivity.loadFragment(Constant.EMPLOYEE_ACCOUNT_DETAILS, bundle);
+                break;
+
+                case R.id.tv_leave:
                 tvLeave.setBackgroundResource(R.drawable.border_rect);
+                    tv_account.setBackgroundResource(R.drawable.border);
                 tv_homework.setBackgroundResource(R.drawable.border);
                 tv_attendance.setBackgroundResource(R.drawable.border);
                 ll_academic.setBackgroundResource(R.drawable.border);
@@ -578,6 +600,7 @@ TextView tvLeave,tv_homework;
                 case R.id.tv_homework:
                 tv_homework.setBackgroundResource(R.drawable.border_rect);
                 tvLeave.setBackgroundResource(R.drawable.border);
+                    tv_account.setBackgroundResource(R.drawable.border);
                 tv_attendance.setBackgroundResource(R.drawable.border);
                 ll_academic.setBackgroundResource(R.drawable.border);
                 ll_health.setBackgroundResource(R.drawable.border);
@@ -597,6 +620,7 @@ TextView tvLeave,tv_homework;
 
             case R.id.tv_attendance:
                 tv_attendance.setBackgroundResource(R.drawable.border_rect);
+                tv_account.setBackgroundResource(R.drawable.border);
                 ll_academic.setBackgroundResource(R.drawable.border);
                 tv_homework.setBackgroundResource(R.drawable.border);
                 ll_health.setBackgroundResource(R.drawable.border);
@@ -620,6 +644,7 @@ TextView tvLeave,tv_homework;
 
             case R.id.ll_personal:
                 ll_personal.setBackgroundResource(R.drawable.border_rect);
+                tv_account.setBackgroundResource(R.drawable.border);
                 tv_homework.setBackgroundResource(R.drawable.border);
                 tv_attendance.setBackgroundResource(R.drawable.border);
                 ll_academic.setBackgroundResource(R.drawable.border);
@@ -639,6 +664,7 @@ TextView tvLeave,tv_homework;
             case R.id.ll_academic:
 
                 ll_personal.setBackgroundResource(R.drawable.border);
+                tv_account.setBackgroundResource(R.drawable.border);
                 ll_academic.setBackgroundResource(R.drawable.border_rect);
                 tv_attendance.setBackgroundResource(R.drawable.border);
                 tv_homework.setBackgroundResource(R.drawable.border);
@@ -654,6 +680,7 @@ TextView tvLeave,tv_homework;
 
             case R.id.ll_health:
                 tv_attendance.setBackgroundResource(R.drawable.border);
+                tv_account.setBackgroundResource(R.drawable.border);
                 tv_homework.setBackgroundResource(R.drawable.border);
                 ll_personal.setBackgroundResource(R.drawable.border);
                 ll_academic.setBackgroundResource(R.drawable.border);
@@ -669,6 +696,7 @@ TextView tvLeave,tv_homework;
 
             case R.id.ll_docs:
                 tv_attendance.setBackgroundResource(R.drawable.border);
+                tv_account.setBackgroundResource(R.drawable.border);
                 ll_personal.setBackgroundResource(R.drawable.border);
                 tv_homework.setBackgroundResource(R.drawable.border);
                 ll_academic.setBackgroundResource(R.drawable.border);

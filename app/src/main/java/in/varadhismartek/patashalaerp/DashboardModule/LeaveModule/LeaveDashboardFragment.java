@@ -297,6 +297,7 @@ public class LeaveDashboardFragment extends Fragment implements View.OnClickList
                                 String used_leaves = keyData.getString("used_leaves");
                                 String remaining_leaves = keyData.getString("remaining_leaves");
 
+                                Log.d("total_leaves", used_leaves+total_leaves);
                                 arrayListForChart.add(new LeaveModel(leave_type,total_leaves,used_leaves,remaining_leaves));
                             }
 
@@ -324,7 +325,7 @@ public class LeaveDashboardFragment extends Fragment implements View.OnClickList
                         JSONObject obj = new JSONObject(response.errorBody().string());
                         String message = obj.getString("message");
                         Log.d("MY_STATUS", message);
-                        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
                     } catch (Exception e) {
                         e.printStackTrace();
                         Log.d("MY_STATUS", e.getMessage());

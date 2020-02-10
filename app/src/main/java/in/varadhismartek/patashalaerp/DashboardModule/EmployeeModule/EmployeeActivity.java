@@ -49,6 +49,10 @@ public class EmployeeActivity extends AppCompatActivity {
             case Constant.HOMEWORK_VIEW_FRAGMENT:
                 callFragment(new HomeworkViewFragment(), Constant.HOMEWORK_VIEW_FRAGMENT, null, bundle);
                 break;
+
+            case Constant.EMPLOYEE_ACCOUNT_DETAILS:
+                callFragment(new EmployeeAccountDetails(), Constant.EMPLOYEE_ACCOUNT_DETAILS, null, bundle);
+                break;
         }
     }
 

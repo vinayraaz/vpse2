@@ -253,6 +253,7 @@ public class Constant {
     public static final String EMPLOYEE_VIEW_FRAGMENT = "EMPLOYEE_VIEW_FRAGMENT";
     public static final String ATTENDANCE_FRAGMENT = "ATTENDANCE_FRAGMENT";
     public static final String EMPLOYEE_LEAVE = "EMPLOYEE_LEAVE";
+    public static final String EMPLOYEE_ACCOUNT_DETAILS = "EMPLOYEE_ACCOUNT_DETAILS";
 
     public static final String STUDENT_ATTENDANCE_LIST = "STUDENT_ATTENDANCE_LIST";
     public static final String RV_STUDENT_ATTENDANCE_LIST = "RV_STUDENT_ATTENDANCE_LIST";
