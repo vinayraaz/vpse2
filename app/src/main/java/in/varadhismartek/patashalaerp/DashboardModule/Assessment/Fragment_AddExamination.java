@@ -167,12 +167,12 @@ public class Fragment_AddExamination extends Fragment implements View.OnClickLis
                 }else {
                     if (addExamArrayList.size()>0){
                         for (int i = 0; i < addExamArrayList.size(); i++) {
-                            if (addExamArrayList.get(i).getWingsName().toLowerCase().equals(editvalue.toLowerCase())) {
+                            if (addExamArrayList.get(i).getWingsName().equalsIgnoreCase(editvalue)) {
                                 value = addExamArrayList.get(i).getWingsName();
                             }
                         }
 
-                        if (value.toLowerCase().equals(editvalue.toLowerCase())) {
+                        if (value.equalsIgnoreCase(editvalue)) {
                             Toast.makeText(getActivity(), "Already Exist", LENGTH_SHORT).show();
                         } else {
                             assessmentAdapter.newValues(editvalue);

@@ -166,10 +166,10 @@ public class AssessmentAdapter extends RecyclerView.Adapter<AssessmentViewHolder
                 int num2 = (int) Double.parseDouble(arrayListSport.get(i).getMentors());
                 int num3 = (int) Double.parseDouble(arrayListSport.get(i).getSupportPlayers());
 
-                holder.tvMaxPlayer.setText("Max Player : "+String.valueOf(num));
-                holder.tvMentorNo.setText("No of Mentor : "+String.valueOf(num2));
-                holder.tvSupportPlayer.setText("Support Players : "+String.valueOf(num3));
-                holder.tvRoleName.setText("Judge\nRole Name : "+arrayListSport.get(i).getMentorPosition_name());
+                holder.tvMaxPlayer.setText("Max Player : " + String.valueOf(num));
+                holder.tvMentorNo.setText("No of Mentor : " + String.valueOf(num2));
+                holder.tvSupportPlayer.setText("Support Players : " + String.valueOf(num3));
+                holder.tvRoleName.setText("Judge\nRole Name : " + arrayListSport.get(i).getMentorPosition_name());
 
                 break;
 
@@ -386,8 +386,8 @@ public class AssessmentAdapter extends RecyclerView.Adapter<AssessmentViewHolder
 
                         }
 
-                        Log.i("objectWings**", "" + objectWings);
 
+                        Log.i("objectWings**", "" + objectWings);
                         apiService.updateExamByStatus(Constant.SCHOOL_ID, objectWings, Constant.EMPLOYEE_BY_ID)
                                 .enqueue(new Callback<Object>() {
                                     @Override
@@ -692,66 +692,92 @@ public class AssessmentAdapter extends RecyclerView.Adapter<AssessmentViewHolder
             public void onClick(View v) {
 
                 final String newName = et_new_name.getText().toString();
+System.out.println("Size**"+addExamArrayList.size());
 
-                if (newName.equals("")) {
-                    Toast.makeText(mContext, "New Name Can Not Be Empty", Toast.LENGTH_SHORT).show();
+                if (addExamArrayList.size()>0){
 
-                } else {
+                    boolean b= true;
+                    for (int i=0;i<addExamArrayList.size();i++){
+                        if (newName.equalsIgnoreCase(addExamArrayList.get(i).getWingsName())){
+                            b =false;
+                            Toast.makeText(mContext, "Data already exist", Toast.LENGTH_SHORT).show();
+                            et_new_name.setText("");
+                        }
+                    }
 
-                    apiService.updateExameByname(Constant.SCHOOL_ID,
-                            oldName, newName, Constant.EMPLOYEE_BY_ID).enqueue(new Callback<Object>() {
-                        @Override
-                        public void onResponse(Call<Object> call, Response<Object> response) {
+                    if (et_new_name.getText().toString().isEmpty() ||et_new_name.getText().toString().equals("")){
+                        Toast.makeText(mContext, "Enter the exam type value", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(mContext, "Data not exist", Toast.LENGTH_SHORT).show();
+                        apiService.updateExameByname(Constant.SCHOOL_ID,
+                                oldName, newName, Constant.EMPLOYEE_BY_ID).enqueue(new Callback<Object>() {
+                            @Override
+                            public void onResponse(Call<Object> call, Response<Object> response) {
 
-                            JSONObject object = null;
+                                JSONObject object = null;
 
-                            if (response.isSuccessful()) {
-                                Log.d("UPDATE_WINGS_SUCCESS", response.body().toString());
+                                if (response.isSuccessful()) {
+                                    Log.d("UPDATE_WINGS_SUCCESS", response.body().toString());
 
-                                try {
-                                    object = new JSONObject(new Gson().toJson(response.body()));
-                                    String status = object.getString("status");
+                                    try {
+                                        object = new JSONObject(new Gson().toJson(response.body()));
+                                        String status = object.getString("status");
 
-                                    if (status.equalsIgnoreCase("Sucess")) {
-                                        Toast.makeText(mContext, "Exam Type Successfully Update",
-                                                Toast.LENGTH_SHORT).show();
-                                        Intent intent = new Intent(mContext, ExamActivity.class);
-                                        intent.putExtra("Assessement_Option", "Exam");
-                                        mContext.startActivity(intent);
-                                        ((Activity) mContext).finish();
+                                        if (status.equalsIgnoreCase("Sucess")) {
+                                            Toast.makeText(mContext, "Exam Type Successfully Update",
+                                                    Toast.LENGTH_SHORT).show();
+                                            ExamActivity examActivity = (ExamActivity)mContext;
+                                            examActivity.loadFragment(Constant.ADD_EXAMINATION,null);
+                                             /*   intent.putExtra("Assessement_Option", "Exam");
+                                                mContext.startActivity(intent);
+                                                ((Activity) mContext).finish();*/
 
 
+                                        }
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
                                     }
 
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
 
-
-                                dialog.dismiss();
-
-                            } else {
-                                Log.d("UPDATE_WINGS_FAIL", String.valueOf(response.code()));
-                                if (String.valueOf(response.code()).equals("409")) {
-                                    Toast.makeText(mContext, "Exam type name already exists", Toast.LENGTH_SHORT).show();
                                     dialog.dismiss();
-                                }
-                                if (String.valueOf(response.code()).equals("404")) {
-                                    Toast.makeText(mContext, "Old exam type name not exists", Toast.LENGTH_SHORT).show();
-                                    dialog.dismiss();
+
+                                } else {
+                                    Log.d("UPDATE_WINGS_FAIL", String.valueOf(response.code()));
+                                    if (String.valueOf(response.code()).equals("409")) {
+                                        Toast.makeText(mContext, "Exam type name already exists", Toast.LENGTH_SHORT).show();
+                                        dialog.dismiss();
+                                    }
+                                    if (String.valueOf(response.code()).equals("404")) {
+                                        Toast.makeText(mContext, "Old exam type name not exists", Toast.LENGTH_SHORT).show();
+                                        dialog.dismiss();
+                                    }
+
                                 }
 
                             }
 
-                        }
+                            @Override
+                            public void onFailure(Call<Object> call, Throwable t) {
+                                Log.d("UPDATE_WINGS_EX", t.getMessage());
 
-                        @Override
-                        public void onFailure(Call<Object> call, Throwable t) {
-                            Log.d("UPDATE_WINGS_EX", t.getMessage());
+                            }
+                        });
+                    }
 
-                        }
-                    });
                 }
+
+
+
+
+
+               /* if (newName.equals("")) {
+                    Toast.makeText(mContext, "New Name Can Not Be Empty", Toast.LENGTH_SHORT).show();
+
+                } else {
+
+
+                }*/
             }
         });
     }
