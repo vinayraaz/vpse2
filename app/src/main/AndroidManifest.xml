@@ -20,6 +20,7 @@
         <activity android:name=".DashboardModule.NotificationModule.NotificationActivity"></activity>
         <activity android:name=".DashboardModule.VisitorModule.VisitorActivity" />
         <activity android:name=".DashboardModule.House.House_Activity" />
+        <activity android:name=".DashboardModule.timetable.TimeTableActivity" />
         <activity android:name=".Timetable.TimeTableMain_Activity" />
         <activity android:name=".DashboardModule.EmployeeModule.EmployeeActivity" />
         <activity android:name=".DashboardModule.DashBoardMenuActivity" />

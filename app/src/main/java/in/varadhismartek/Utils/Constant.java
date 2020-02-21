@@ -304,6 +304,8 @@ public class Constant {
     public static final String SCHEDULE_INBOX_FRAGMENT = "SCHEDULE_INBOX_FRAGMENT";
     public static final String RV_TIMEYABLE_PERIODS = "RV_TIMEYABLE_PERIODS";
     public static final String RV_TIMEYABLE_DAYS = "RV_TIMEYABLE_DAYS";
+    public static final String PERIOD_TIMINGS = "PERIOD_TIMINGS";
+    public static final String DAYS = "DAYS";
 
 
 

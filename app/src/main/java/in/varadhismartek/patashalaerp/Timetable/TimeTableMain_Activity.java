@@ -54,7 +54,7 @@ public class TimeTableMain_Activity extends AppCompatActivity {
     }
 
     private void getPeriodMethod() {
-        apiService.getPeriods(Constant.SCHOOL_ID,"Primary","1","2019-01-01")
+        apiService.getPeriods(Constant.SCHOOL_ID,"Primary","1","2020-06-08")
                 .enqueue(new Callback<Object>() {
             @Override
             public void onResponse(Call<Object> call, Response<Object> response) {

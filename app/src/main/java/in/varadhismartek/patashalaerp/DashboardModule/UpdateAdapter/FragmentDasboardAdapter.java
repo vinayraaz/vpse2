@@ -23,6 +23,7 @@ import in.varadhismartek.patashalaerp.DashboardModule.House.House_Activity;
 import in.varadhismartek.patashalaerp.DashboardModule.NoticeBoard.NoticeBoardActivity;
 import in.varadhismartek.patashalaerp.DashboardModule.Syllabus.SyllabusActivity;
 import in.varadhismartek.patashalaerp.DashboardModule.VisitorModule.VisitorActivity;
+import in.varadhismartek.patashalaerp.DashboardModule.timetable.TimeTableActivity;
 import in.varadhismartek.patashalaerp.GalleryModule.GalleryActivity;
 import in.varadhismartek.patashalaerp.DashboardModule.NotificationModule.NotificationActivity;
 import in.varadhismartek.patashalaerp.R;
@@ -71,7 +72,7 @@ public class FragmentDasboardAdapter extends RecyclerView.Adapter<FragmentDasboa
                 }
 
                 else if (menuName.equalsIgnoreCase("TimeTable")) {
-                    Intent intent = new Intent(context, TimeTableMain_Activity.class);
+                    Intent intent = new Intent(context, TimeTableActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }

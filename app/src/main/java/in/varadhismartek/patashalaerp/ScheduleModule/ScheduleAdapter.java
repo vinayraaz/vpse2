@@ -101,7 +101,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ScheduleViewHolder holder, final int i) {
 
-        ScheduleActivity scheduleActivity = (ScheduleActivity) mContext;
+        final ScheduleActivity scheduleActivity = (ScheduleActivity) mContext;
 
         switch (recyclerTag){
 
@@ -155,7 +155,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleViewHolder> {
 
                         bundle.putSerializable("ScheduleModel", scheduleList.get(i));
 
-                        //scheduleActivity.loadFragment(Constant.SCHEDULE_DETAILS_FRAGMENT, bundle);
+                        scheduleActivity.loadFragment(Constant.SCHEDULE_DETAILS_FRAGMENT, bundle);
 
                     }
                 });

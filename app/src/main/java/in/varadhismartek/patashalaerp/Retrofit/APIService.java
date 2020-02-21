@@ -24,7 +24,39 @@ import retrofit2.http.Part;
 public interface APIService {
 
 
-    //8f82a5f5-3441-49eb-b67a-c113668f9140
+
+  @FormUrlEncoded
+  @POST("get_school_academic_years")
+  Call<Object> getAchoolAcademicYears(
+          @Field("school_id") String school_id
+  );
+  @FormUrlEncoded
+  @POST("get_school_sessions")
+  Call<Object> getSchoolSessions(
+          @Field("school_id") String school_id,
+          @Field("academic_start_date") String academic_start_date,
+          @Field("academic_end_date") String academic_end_date
+  );
+
+  @FormUrlEncoded
+  @POST("get_class_section_timetable")
+  Call<Object> getClassSectionTimeTable(
+          @Field("school_id") String school_id,
+          @Field("class") String sch_class,
+          @Field("session_serial_no") String session_serial_no,
+          @Field("academic_start_date") String academic_start_date,
+          @Field("section") String section
+  );
+  @FormUrlEncoded
+  @POST("get_arranged_timetable_barrier")
+  Call<Object> getArrangeTimetableBarriers(
+          @Field("school_id") String school_id,
+          @Field("division") String division,
+          @Field("session_serial_no") String session_serial_no,
+          @Field("academic_start_date") String academic_start_date
+  );
+
+  //8f82a5f5-3441-49eb-b67a-c113668f9140
 //    http://13.233.109.165:8000/school/check_last_filled_school_barrier
 
     @FormUrlEncoded
