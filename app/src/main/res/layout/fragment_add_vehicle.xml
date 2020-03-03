@@ -1,0 +1,2076 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Ll_both_match_heading"
+    android:background="@color/colorPrimaryDark">
+
+    <RelativeLayout style="@style/Rl_normal">
+
+        <ImageView
+            android:id="@+id/img_backbtnaddress"
+            style="@style/imgvw_normal_mrgn_pad"
+            android:src="@drawable/ic_arrow_back_white_24dp" />
+
+        <TextView
+            style="@style/tv_heading_mrgn_pad"
+            android:layout_centerHorizontal="true"
+            android:text="Add Vehicle"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/btnsave"
+            style="@style/tv_normal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp10"
+            android:drawableLeft="@drawable/send"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18"
+            tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        style="@style/Ll_both_match_heading"
+        android:background="@drawable/card_shape">
+
+
+        <LinearLayout style="@style/Ll_normal_vtl">
+
+            <!--basic vehicle details-->
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                android:layout_margin="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                app:cardCornerRadius="@dimen/dp8">
+
+                <LinearLayout style="@style/Ll_normal_vtl">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_first"
+                        style="@style/Ll_normal_htl"
+                        android:padding="@dimen/dp5">
+
+                        <TextView
+                            style="@style/tv_normal_mrgn_pad"
+                            android:layout_centerHorizontal="true"
+                            android:text="Basic Details" />
+
+                        <ImageView
+                            android:id="@+id/img_drop_down_up"
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            tools:ignore="RtlHardcoded" />
+
+                        <ImageView
+                            android:id="@+id/img_drop_down"
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill_down"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_first"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            style="@style/view_horizantal_heightwrapcontent"
+                            android:background="#eae8e8" />
+
+                        <LinearLayout style="@style/Ll_normal_htl">
+
+                            <TextView
+                                style="@style/tv_weight_normal"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/dp8"
+                                android:text="@string/class_of_vehicle"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/vehicle_type"
+                                style="@style/spinner_weight" />
+
+                        </LinearLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_wmatch_hwrap"
+                            android:layout_margin="@dimen/dp5">
+
+                            <TextView
+                                android:id="@+id/vehicle_id"
+                                style="@style/edittext_normal"
+                                android:layout_marginLeft="@dimen/dp20"
+                                android:importantForAutofill="no"
+                                android:inputType="text|number"
+                                android:textSize="@dimen/sp18"
+                                tools:ignore="RtlHardcoded,TextViewEdits"
+                                tools:targetApi="o" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout style="@style/textinputlaout_wmatch_hwrap">
+
+                            <EditText
+                                android:id="@+id/ed_regNo"
+                                style="@style/edittext_normal"
+                                android:hint="@string/vehicle_registration_number" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout style="@style/textinputlaout_wmatch_hwrap">
+
+                            <EditText
+                                android:id="@+id/ed_Name"
+                                style="@style/edittext_normal"
+                                android:hint="@string/vehicle_name" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout style="@style/textinputlaout_wmatch_hwrap">
+
+                            <EditText
+                                android:id="@+id/ed_GpsDetails"
+                                style="@style/edittext_normal"
+                                android:hint="@string/vehicle_gps_details" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!--vehicle registration details-->
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                android:layout_margin="@dimen/dp5"
+                android:elevation="@dimen/dp3"
+                app:cardCornerRadius="@dimen/dp8"
+                tools:ignore="UnusedAttribute">
+
+                <LinearLayout style="@style/Ll_normal_vtl">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_Second"
+                        style="@style/Ll_normal_htl"
+                        android:padding="@dimen/dp5">
+
+                        <TextView
+                            style="@style/tv_normal_mrgn_pad"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/registration_details" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            tools:ignore="RtlHardcoded" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill_down"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/view_horizantal_heightwrapcontent"
+                        android:background="#eae8e8" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_Second"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout style="@style/Ll_normal_htl">
+
+
+                            <TextView
+                                style="@style/tv_weight_normal"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/dp8"
+                                android:text="@string/type_of_body"
+                                tools:ignore="RtlHardcoded" />
+
+                            <Spinner
+                                android:id="@+id/bodytype_id"
+                                style="@style/spinner_weight"
+                                android:background="@drawable/spinnerbackground" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/ed_ChasisNo"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/enter_chasis_number"
+                                    tools:ignore="TextFields,UnusedAttribute" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/ed_EngineNo"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/vehicle_engine_number"
+                                    tools:ignore="TextFields" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/ed_makerName"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/vehicle_maker_s_name" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/ed_ModelNo"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/vehicle_model_number"
+                                    android:inputType="number"
+                                    android:maxLength="10"
+                                    tools:ignore="TextFields,UnusedAttribute" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/ed_ManuYear"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/vehicle_manufacturing_year"
+                                    android:inputType="number"
+                                    tools:ignore="UnusedAttribute" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/ed_SeatCapacity"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/vehicle_seating_capacity_including_driver"
+                                    android:inputType="number"
+                                    tools:ignore="UnusedAttribute" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/ed_RegAutho"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/vehicle_registering_authority"
+                                    tools:targetApi="o" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/ed_RegState"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/vehicle_registering_state"
+                                    android:inputType="textCapWords|text"
+                                    tools:targetApi="o" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout style="@style/Ll_normal_htl">
+
+                            <RelativeLayout
+                                style="@style/Rl_htl_weight"
+                                android:layout_margin="@dimen/dp5"
+                                android:background="@drawable/shape6">
+
+
+                                <EditText
+                                    android:id="@+id/ed_RegisteredDate"
+                                    style="@style/tv_normal"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:focusable="false"
+                                    android:inputType="date"
+                                    android:padding="@dimen/dp5"
+                                    android:hint="@string/registered_date"
+                                    tools:ignore="LabelFor" />
+
+                                <ImageView
+                                    style="@style/imgvw_normal"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="@dimen/dp1"
+                                    android:background="@drawable/img_bg"
+                                    android:contentDescription="@string/time"
+                                    android:padding="@dimen/dp5"
+                                    android:src="@drawable/ic_date_range_black_24dp"
+                                    tools:ignore="RtlHardcoded" />
+
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                style="@style/Rl_htl_weight"
+                                android:layout_margin="@dimen/dp5"
+                                android:background="@drawable/shape6">
+
+
+                                <EditText
+                                    android:id="@+id/ed_PurchaseDate"
+                                    style="@style/tv_normal"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:focusable="false"
+                                    android:inputType="date"
+                                    android:padding="@dimen/dp5"
+                                    android:hint="@string/purchase_date"
+                                    tools:ignore="LabelFor,TextFields" />
+
+                                <ImageView
+                                    style="@style/imgvw_normal"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="@dimen/dp1"
+                                    android:background="@drawable/img_bg"
+                                    android:contentDescription="@string/time"
+                                    android:padding="@dimen/dp5"
+                                    android:src="@drawable/ic_date_range_black_24dp"
+                                    tools:ignore="RtlHardcoded" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_normal_vtl"
+                            android:background="@drawable/border">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_wmatch_hwrap"
+                                android:layout_margin="@dimen/dp5">
+
+                                <EditText
+                                    android:id="@+id/ed_PreOwnerName"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/previous_owner_details"
+                                    android:inputType="textCapSentences|text"
+                                    tools:ignore="TooDeepLayout"
+                                    tools:targetApi="o" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                            <LinearLayout style="@style/Ll_normal_htl">
+
+                                <RelativeLayout
+                                    style="@style/Rl_htl_weight"
+                                    android:layout_margin="@dimen/dp5"
+                                    android:background="@drawable/shape6">
+
+
+                                    <EditText
+                                        android:id="@+id/ed_Pre_Owner_PurDate"
+                                        style="@style/tv_normal"
+                                        android:layout_centerVertical="true"
+                                        android:background="@null"
+                                        android:focusable="false"
+                                        android:inputType="textCapSentences|text|date"
+                                        android:padding="@dimen/dp5"
+                                        android:hint="@string/purchase_date"
+                                        tools:ignore="LabelFor,TooDeepLayout" />
+
+
+                                    <ImageView
+                                        style="@style/imgvw_normal"
+                                        android:layout_height="34dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="@dimen/dp1"
+                                        android:background="@drawable/img_bg"
+                                        android:contentDescription="@string/time"
+                                        android:padding="@dimen/dp5"
+                                        android:src="@drawable/ic_date_range_black_24dp"
+                                        tools:ignore="RtlHardcoded" />
+
+
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    style="@style/Rl_htl_weight"
+                                    android:layout_margin="@dimen/dp5"
+                                    android:background="@drawable/shape6">
+
+
+                                    <EditText
+                                        android:id="@+id/ed_Pre_Owner_Cost"
+                                        style="@style/tv_normal"
+                                        android:layout_centerVertical="true"
+                                        android:background="@null"
+                                        android:focusable="false"
+                                        android:inputType="number"
+                                        android:padding="@dimen/dp5"
+                                        android:hint="@string/purchase_cost"
+                                        tools:ignore="LabelFor" />
+
+                                    <ImageView
+                                        style="@style/imgvw_normal"
+                                        android:layout_height="34dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="@dimen/dp1"
+                                        android:background="@drawable/img_bg"
+                                        android:contentDescription="@string/time"
+                                        android:padding="@dimen/dp5"
+                                        android:src="@drawable/ic_date_range_black_24dp"
+                                        tools:ignore="RtlHardcoded" />
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/ed_Pre_Owner_Remarks"
+                                style="@style/edittext_normal"
+                                android:layout_height="@dimen/dp100"
+                                android:layout_margin="@dimen/dp5"
+                                android:background="@drawable/spinnerbackground"
+                                android:gravity="start"
+                                android:hint="@string/particular_of_previous_registration_and_registered_number_if_any"
+                                android:inputType="textMultiLine"
+                                android:padding="@dimen/dp5" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+            <!--servicing details-->
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                android:layout_margin="@dimen/dp5"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardElevation="@dimen/dp5">
+
+                <LinearLayout style="@style/Ll_normal_vtl">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_Third"
+                        style="@style/Ll_normal_htl"
+                        android:padding="@dimen/dp5">
+
+                        <TextView
+                            style="@style/tv_normal_mrgn_pad"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/servicing_details" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            tools:ignore="RtlHardcoded" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded,TooManyViews" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/view_horizantal_heightwrapcontent"
+                        android:background="#eae8e8"
+                        tools:ignore="TooManyViews" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_Third"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                tools:ignore="TooManyViews">
+
+                                <EditText
+                                    android:id="@+id/ed_Ser_TFee"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/total_free_service"
+                                    android:inputType="number"
+                                    tools:targetApi="o" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                <EditText
+                                    android:id="@+id/ed_Ser_RFee"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/remaining_free_service"
+                                    android:inputType="number"
+                                    tools:ignore="UnusedAttribute" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+                            <RelativeLayout
+                                style="@style/Rl_htl_weight"
+                                android:layout_margin="@dimen/dp5"
+                                android:background="@drawable/shape6">
+
+
+                                <EditText
+                                    android:id="@+id/ed_Ser_NextKM"
+                                    style="@style/tv_normal"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:inputType="text"
+                                    android:paddingLeft="@dimen/dp5"
+                                    android:hint="@string/next_service_in"
+                                    tools:ignore="LabelFor,RtlHardcoded,RtlSymmetry" />
+
+                                <ImageView
+                                    style="@style/imgvw_normal"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="@dimen/dp1"
+                                    android:background="@drawable/img_bg"
+                                    android:contentDescription="@string/time"
+                                    android:padding="@dimen/dp5"
+                                    android:src="@drawable/kms"
+                                    tools:ignore="RtlHardcoded" />
+
+
+                            </RelativeLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight"
+                                android:layout_weight="1">
+
+                                <EditText
+                                    android:id="@+id/ed_Ser_NextDay"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/next_service_in_days"
+                                    tools:targetApi="o" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+                            <RelativeLayout
+                                style="@style/Rl_htl_weight"
+                                android:layout_margin="@dimen/dp5"
+                                android:background="@drawable/shape6">
+
+
+                                <EditText
+                                    android:id="@+id/ed_Ser_NextRenewalDate"
+                                    style="@style/tv_normal"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:focusable="false"
+                                    android:inputType="text"
+                                    android:padding="@dimen/dp5"
+                                    android:hint="@string/next_renewal_date"
+                                    tools:ignore="LabelFor" />
+
+                                <ImageView
+                                    style="@style/imgvw_normal"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="@dimen/dp1"
+                                    android:background="@drawable/img_bg"
+                                    android:contentDescription="@string/time"
+                                    android:padding="@dimen/dp5"
+                                    android:src="@drawable/ic_date_range_black_24dp"
+                                    tools:ignore="RtlHardcoded" />
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                style="@style/Ll_normal_htl_mrgn_pad"
+                                android:layout_width="@dimen/dp0"
+                                android:layout_weight="1"
+                                android:background="@drawable/card_shape"
+                                tools:ignore="InefficientWeight">
+
+                                <TextView
+                                    style="@style/tv_weight_normal"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:text="@string/send_renewal_alert"
+                                    android:textSize="@dimen/sp13"
+                                    tools:ignore="NestedWeights" />
+
+                                <Switch
+                                    android:id="@+id/sw_Service"
+                                    style="@style/tv_weight_normal"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:layout_weight="0.2"
+                                    tools:ignore="NestedWeights" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+            <!--INSURENCE DETAILS-->
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                android:layout_margin="@dimen/dp5"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardElevation="@dimen/dp5">
+
+                <LinearLayout style="@style/Ll_normal_vtl">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_Fourth"
+                        style="@style/Ll_normal_htl"
+                        android:padding="@dimen/dp5">
+
+                        <TextView
+                            style="@style/tv_normal_mrgn_pad"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/insurance_details" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            tools:ignore="RtlHardcoded" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/view_horizantal_heightwrapcontent"
+                        android:background="#eae8e8" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_Fourth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+                            <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                <EditText
+                                    android:id="@+id/ed_Insurance_Type"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/insurance_type"
+                                    tools:targetApi="o" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                <EditText
+                                    android:id="@+id/ed_Insurance_No"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/insurance_number"
+                                    tools:targetApi="o" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/Ll_normal_htl">
+
+                            <RelativeLayout
+                                style="@style/Rl_htl_weight"
+                                android:layout_margin="@dimen/dp5"
+                                android:background="@drawable/shape6">
+
+
+                                <EditText
+                                    android:id="@+id/ed_Insurance_Date"
+                                    style="@style/tv_normal"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:focusable="false"
+                                    android:inputType="text"
+                                    android:padding="@dimen/dp5"
+                                    android:hint="@string/insurence_date"
+                                    tools:ignore="LabelFor" />
+
+                                <ImageView
+                                    style="@style/imgvw_normal"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="@dimen/dp1"
+                                    android:background="@drawable/img_bg"
+                                    android:contentDescription="@string/time"
+                                    android:padding="@dimen/dp5"
+                                    android:src="@drawable/ic_date_range_black_24dp"
+                                    tools:ignore="RtlHardcoded" />
+
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                style="@style/Rl_htl_weight"
+                                android:layout_margin="@dimen/dp5"
+                                android:background="@drawable/shape6">
+
+
+                                <EditText
+                                    android:id="@+id/ed_Insurance_ReNewDate"
+                                    style="@style/tv_normal"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:focusable="false"
+                                    android:inputType="text"
+                                    android:padding="@dimen/dp5"
+                                    android:hint="@string/renewed_date"
+                                    tools:ignore="LabelFor" />
+
+                                <ImageView
+                                    style="@style/imgvw_normal"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="@dimen/dp1"
+                                    android:background="@drawable/img_bg"
+                                    android:contentDescription="@string/time"
+                                    android:padding="@dimen/dp5"
+                                    android:src="@drawable/ic_date_range_black_24dp"
+                                    tools:ignore="RtlHardcoded" />
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+                            <RelativeLayout
+                                style="@style/Rl_htl_weight"
+                                android:layout_margin="@dimen/dp5"
+                                android:background="@drawable/shape6">
+
+
+                                <EditText
+                                    android:id="@+id/ed_Insurance_NextReNewDate"
+                                    style="@style/tv_normal"
+                                    android:layout_centerVertical="true"
+                                    android:background="@null"
+                                    android:focusable="false"
+                                    android:inputType="text"
+                                    android:padding="@dimen/dp5"
+                                    android:hint="@string/next_renewal_date"
+                                    tools:ignore="LabelFor" />
+
+                                <ImageView
+                                    style="@style/imgvw_normal"
+                                    android:layout_height="34dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="@dimen/dp1"
+                                    android:background="@drawable/img_bg"
+                                    android:contentDescription="@string/time"
+                                    android:padding="@dimen/dp5"
+                                    android:src="@drawable/ic_date_range_black_24dp"
+                                    tools:ignore="RtlHardcoded" />
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                style="@style/Ll_normal_htl_mrgn_pad"
+                                android:layout_width="@dimen/dp0"
+                                android:layout_weight="1"
+                                android:background="@drawable/card_shape"
+                                tools:ignore="InefficientWeight">
+
+                                <TextView
+                                    style="@style/tv_weight_normal"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:text="@string/send_renewal_alert"
+                                    android:textSize="@dimen/sp13"
+                                    tools:ignore="NestedWeights" />
+
+                                <Switch
+                                    android:id="@+id/sw_Insurance"
+                                    style="@style/tv_weight_normal"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:layout_weight="0.2"
+                                    tools:ignore="NestedWeights" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <!--agent details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_fifth"
+                    style="@style/Ll_normal_htl"
+                    android:padding="@dimen/dp5">
+
+                    <TextView
+                        style="@style/tv_normal_mrgn_pad"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/agent_details" />
+
+                    <ImageView
+                        style="@style/imgvw_normal"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/drop_down"
+                        android:src="@drawable/ic_down_key_fill"
+                        tools:ignore="RtlHardcoded" />
+
+                    <ImageView
+                        style="@style/imgvw_normal"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@string/drop_down"
+                        android:src="@drawable/ic_down_key_fill"
+                        android:visibility="gone"
+                        tools:ignore="RtlHardcoded" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fifth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        style="@style/Ll_normal_htl"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight">
+
+                            <EditText
+                                android:id="@+id/ed_Agent_ID"
+                                style="@style/edittext_normal"
+                                android:hint="@string/agent_id"
+                                tools:targetApi="o" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight"
+                            android:layout_weight="2">
+
+                            <EditText
+                                android:id="@+id/ed_Agent_Name"
+                                style="@style/edittext_normal"
+                                android:hint="@string/agent_name"
+                                tools:targetApi="o" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        style="@style/textinputlaout_wmatch_hwrap">
+
+                        <EditText
+                            android:id="@+id/ed_Agent_CompanyName"
+                            style="@style/edittext_normal"
+                            android:hint="@string/insurance_company_name"
+                            android:textSize="@dimen/sp14"
+                            tools:targetApi="o" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        style="@style/Ll_normal_htl"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/ed_Agent_No"
+                                style="@style/edittext_normal"
+                                android:hint="@string/agent_contact_number"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                tools:targetApi="o" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/ed_Agent_Insur_No"
+                                style="@style/edittext_normal"
+                                android:hint="@string/insurance_company_number"
+                                tools:targetApi="o" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <!--attachents-->
+
+                    <RelativeLayout
+                        style="@style/tv_normal"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp8"
+                        android:background="@drawable/attachment_green">
+
+                        <ImageView
+                            android:id="@+id/img_otherdoc_attachfile"
+                            style="@style/imgvw_normal"
+                            android:layout_marginTop="@dimen/dp5"
+                            android:contentDescription="@string/choose_image"
+                            android:padding="@dimen/dp5"
+                            android:src="@drawable/ic_attachment_icon" />
+
+                        <TextView
+                            style="@style/tv_normal"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/img_otherdoc_attachfile"
+                            android:padding="@dimen/dp3"
+                            android:text="@string/attachements"
+                            android:textColor="@color/white"
+                            tools:ignore="RtlHardcoded,TooManyViews" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerteammembers"
+                    style="@style/recyclerViewStyle" />
+
+            </LinearLayout>
+
+
+            <!--other documents-->
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                android:layout_margin="@dimen/dp5"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardElevation="@dimen/dp5">
+
+                <LinearLayout style="@style/Ll_normal_vtl">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_six"
+                        style="@style/Ll_normal_htl"
+                        android:padding="@dimen/dp5">
+
+                        <TextView
+                            style="@style/tv_normal_mrgn_pad"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/other_documents" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            tools:ignore="RtlHardcoded" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/view_horizantal_heightwrapcontent"
+                        android:background="#eae8e8" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_Six"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            style="@style/Ll_normal_htl"
+                            android:baselineAligned="false">
+
+
+                            <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                <EditText
+                                    android:id="@+id/ed_Other_Insur_No"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/insurance_number"
+                                    tools:targetApi="o" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_weight">
+
+                                <EditText
+                                    android:id="@+id/ed_Other_Insur_RcNo"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/rc_number"
+                                    tools:ignore="UnusedAttribute" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/Ll_normal_htl">
+
+                            <android.support.design.widget.TextInputLayout
+                                style="@style/textinputlaout_wmatch_hwrap">
+
+                                <EditText
+                                    android:id="@+id/ed_Other_Insur_NOCNo"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/noc_number"
+                                    tools:ignore="UnusedAttribute" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/Ll_normal_vtl"
+                            android:layout_margin="@dimen/dp5"
+                            android:background="@drawable/border">
+
+                            <TextView
+                                style="@style/tv_normal"
+                                android:layout_margin="@dimen/dp5"
+                                android:text="@string/pollution_certificate_details"
+                                android:textSize="@dimen/sp18" />
+
+
+                            <LinearLayout
+                                style="@style/Ll_normal_htl"
+                                android:baselineAligned="false">
+
+                                <android.support.design.widget.TextInputLayout
+                                    style="@style/textinputlaout_weight"
+                                    android:layout_weight="1">
+
+                                    <EditText
+                                        android:id="@+id/ed_Poll_Cer_No"
+                                        style="@style/edittext_normal"
+                                        android:hint="@string/pollution_certificate_number"
+                                        tools:ignore="UnusedAttribute" />
+
+
+                                </android.support.design.widget.TextInputLayout>
+
+                                <RelativeLayout
+                                    style="@style/Rl_htl_weight"
+                                    android:layout_margin="@dimen/dp5"
+                                    android:background="@drawable/shape6">
+
+
+                                    <EditText
+                                        android:id="@+id/ed_Poll_Cer_RegDate"
+                                        style="@style/tv_normal"
+                                        android:layout_centerVertical="true"
+                                        android:background="@null"
+                                        android:focusable="false"
+                                        android:inputType="text"
+                                        android:hint="@string/registered_date"
+                                        android:textSize="@dimen/sp14"
+                                        tools:ignore="LabelFor" />
+
+                                    <ImageView
+                                        style="@style/imgvw_normal"
+                                        android:layout_height="34dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="@dimen/dp1"
+                                        android:background="@drawable/img_bg"
+                                        android:contentDescription="@string/time"
+                                        android:padding="@dimen/dp5"
+                                        android:src="@drawable/ic_date_range_black_24dp"
+                                        tools:ignore="RtlHardcoded" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/Ll_normal_htl"
+                                android:baselineAligned="false">
+
+                                <RelativeLayout
+                                    style="@style/Rl_htl_weight"
+                                    android:layout_margin="@dimen/dp5"
+                                    android:background="@drawable/shape6">
+
+
+                                    <EditText
+                                        android:id="@+id/ed_Poll_Cer_RenewDate"
+                                        style="@style/tv_normal"
+                                        android:layout_centerVertical="true"
+                                        android:background="@null"
+                                        android:focusable="false"
+                                        android:inputType="text"
+                                        android:padding="@dimen/dp5"
+                                        android:hint="@string/renewed_date"
+                                        tools:ignore="LabelFor" />
+
+                                    <ImageView
+                                        style="@style/imgvw_normal"
+                                        android:layout_height="34dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="@dimen/dp1"
+                                        android:background="@drawable/img_bg"
+                                        android:contentDescription="@string/time"
+                                        android:padding="@dimen/dp5"
+                                        android:src="@drawable/ic_date_range_black_24dp"
+                                        tools:ignore="RtlHardcoded" />
+
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    style="@style/Ll_normal_htl_mrgn_pad"
+                                    android:layout_width="@dimen/dp0"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/card_shape"
+                                    tools:ignore="InefficientWeight">
+
+                                    <TextView
+                                        style="@style/tv_weight_normal"
+                                        android:layout_marginTop="@dimen/dp5"
+                                        android:text="@string/send_renewal_alert"
+                                        android:textSize="@dimen/sp13"
+                                        tools:ignore="NestedWeights" />
+
+                                    <Switch
+                                        android:id="@+id/sw_Poll"
+                                        style="@style/tv_weight_normal"
+                                        android:layout_marginTop="@dimen/dp5"
+                                        android:layout_weight="0.2"
+                                        tools:ignore="NestedWeights" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--fitness certificate details-->
+
+                        <LinearLayout
+                            style="@style/Ll_normal_vtl"
+                            android:layout_margin="@dimen/dp5"
+                            android:background="@drawable/border">
+
+                            <TextView
+                                style="@style/tv_normal"
+                                android:layout_margin="@dimen/dp5"
+                                android:text="@string/fitness_certificate_details"
+                                android:textSize="@dimen/sp18" />
+
+                            <LinearLayout
+                                style="@style/Ll_normal_htl"
+                                android:baselineAligned="false">
+
+                                <android.support.design.widget.TextInputLayout
+                                    style="@style/textinputlaout_weight"
+                                    android:layout_weight="1">
+                                      <EditText
+                                        android:id="@+id/ed_Fit_Cer_no"
+                                        style="@style/edittext_normal"
+                                        android:hint="@string/vehicle_fitness_certificate_number"
+                                        android:textSize="@dimen/sp14" />
+
+
+                                </android.support.design.widget.TextInputLayout>
+
+                                <RelativeLayout
+                                    style="@style/Rl_htl_weight"
+                                    android:layout_margin="@dimen/dp5"
+                                    android:background="@drawable/shape6">
+
+
+                                    <EditText
+                                        android:id="@+id/ed_Fit_Cer_RegDate"
+                                        style="@style/tv_normal"
+                                        android:layout_centerVertical="true"
+                                        android:background="@null"
+                                        android:focusable="false"
+                                        android:inputType="text"
+                                        android:hint="@string/registered_date"
+                                        android:textSize="@dimen/sp14"
+                                        tools:ignore="LabelFor" />
+
+                                    <ImageView
+                                        style="@style/imgvw_normal"
+                                        android:layout_height="34dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="@dimen/dp1"
+                                        android:background="@drawable/img_bg"
+                                        android:contentDescription="@string/time"
+                                        android:padding="@dimen/dp5"
+                                        android:src="@drawable/ic_date_range_black_24dp"
+                                        tools:ignore="RtlHardcoded" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                style="@style/Ll_normal_htl"
+                                android:baselineAligned="false">
+
+                                <RelativeLayout
+                                    style="@style/Rl_htl_weight"
+                                    android:layout_margin="@dimen/dp5"
+                                    android:background="@drawable/shape6">
+
+
+                                    <EditText
+                                        android:id="@+id/ed_Fit_Cer_RenewDate"
+                                        style="@style/tv_normal"
+                                        android:layout_centerVertical="true"
+                                        android:background="@null"
+                                        android:focusable="false"
+                                        android:inputType="text"
+                                        android:padding="@dimen/dp5"
+                                        android:hint="@string/renewed_date"
+                                        tools:ignore="LabelFor" />
+
+                                    <ImageView
+                                        style="@style/imgvw_normal"
+                                        android:layout_height="34dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="@dimen/dp1"
+                                        android:background="@drawable/img_bg"
+                                        android:contentDescription="@string/time"
+                                        android:padding="@dimen/dp5"
+                                        android:src="@drawable/ic_date_range_black_24dp"
+                                        tools:ignore="RtlHardcoded" />
+
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    style="@style/Ll_normal_htl_mrgn_pad"
+                                    android:layout_width="@dimen/dp0"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/card_shape"
+                                    tools:ignore="InefficientWeight">
+
+                                    <TextView
+                                        style="@style/tv_weight_normal"
+                                        android:layout_marginTop="@dimen/dp5"
+                                        android:text="@string/send_renewal_alert"
+                                        android:textSize="@dimen/sp13"
+                                        tools:ignore="NestedWeights" />
+
+                                    <Switch
+                                        android:id="@+id/sw_Fitness"
+                                        style="@style/tv_weight_normal"
+                                        android:layout_marginTop="@dimen/dp5"
+                                        android:layout_weight="0.2"
+                                        tools:ignore="NestedWeights" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--tax permit certificate details-->
+
+                        <LinearLayout
+                            style="@style/Ll_normal_vtl"
+                            android:layout_margin="@dimen/dp5"
+                            android:background="@drawable/border">
+
+                            <TextView
+                                style="@style/tv_normal"
+                                android:layout_margin="@dimen/dp5"
+                                android:text="@string/tax_permit_certificate_details"
+                                android:textSize="@dimen/sp18" />
+
+                            <LinearLayout
+                                style="@style/Ll_normal_htl"
+                                android:baselineAligned="false">
+
+                                <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                    <EditText
+                                        android:id="@+id/ed_Tax_No"
+                                        style="@style/edittext_normal"
+                                        android:hint="@string/tax_permit_number" />
+
+
+                                </android.support.design.widget.TextInputLayout>
+
+
+                                <RelativeLayout
+                                    style="@style/Rl_htl_weight"
+                                    android:layout_margin="@dimen/dp5"
+                                    android:background="@drawable/shape6">
+
+
+                                    <EditText
+                                        android:id="@+id/ed_Tax_RegDate"
+                                        style="@style/tv_normal"
+                                        android:layout_centerVertical="true"
+                                        android:background="@null"
+                                        android:focusable="false"
+                                        android:inputType="text"
+                                        android:hint="@string/registered_date"
+                                        android:textSize="@dimen/sp14"
+                                        tools:ignore="LabelFor" />
+
+                                    <ImageView
+                                        style="@style/imgvw_normal"
+                                        android:layout_height="34dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_margin="@dimen/dp1"
+                                        android:background="@drawable/img_bg"
+                                        android:contentDescription="@string/time"
+                                        android:padding="@dimen/dp5"
+                                        android:src="@drawable/ic_date_range_black_24dp"
+                                        tools:ignore="RtlHardcoded" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/Ll_normal_htl"
+                                android:baselineAligned="false">
+
+                                <android.support.design.widget.TextInputLayout
+                                    style="@style/textinputlaout_weight"
+                                    android:layout_weight="1">
+
+                                    <EditText
+                                        android:id="@+id/ed_Tax_Amount"
+                                        style="@style/edittext_normal"
+                                        android:hint="@string/tax_permit_amount"
+                                        android:inputType="text|number" />
+
+
+                                </android.support.design.widget.TextInputLayout>
+
+
+                                <LinearLayout
+                                    style="@style/Ll_normal_htl_mrgn_pad"
+                                    android:layout_width="@dimen/dp0"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/card_shape"
+                                    tools:ignore="InefficientWeight">
+
+                                    <TextView
+                                        style="@style/tv_weight_normal"
+                                        android:layout_marginTop="@dimen/dp5"
+                                        android:text="@string/send_renewal_alert"
+                                        android:textSize="@dimen/sp13"
+                                        tools:ignore="NestedWeights" />
+
+                                    <Switch
+                                        android:id="@+id/sw_Tax"
+                                        style="@style/tv_weight_normal"
+                                        android:layout_marginTop="@dimen/dp5"
+                                        android:layout_weight="0.2"
+                                        tools:ignore="NestedWeights" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            style="@style/tv_normal"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/dp8"
+                            android:background="@drawable/attachment_green">
+
+                            <ImageView
+                                android:id="@+id/img_loandoc_attachfile"
+                                style="@style/imgvw_normal"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:contentDescription="@string/choose_image"
+                                android:padding="@dimen/dp5"
+                                android:src="@drawable/ic_attachment_icon" />
+
+                            <TextView
+                                style="@style/tv_normal"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/img_loandoc_attachfile"
+                                android:padding="@dimen/dp3"
+                                android:text="@string/fitness_attach"
+                                android:textColor="@color/white"
+                                tools:ignore="RtlHardcoded,TooManyViews" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/otherdocumentsrecyclerview"
+                style="@style/recyclerViewStyle" />
+
+            <!--finacial details-->
+
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                android:layout_margin="@dimen/dp5"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardElevation="@dimen/dp5">
+
+                <LinearLayout style="@style/Ll_normal_vtl">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_Seven"
+                        style="@style/Ll_normal_htl"
+                        android:padding="@dimen/dp5">
+
+                        <TextView
+                            style="@style/tv_normal_mrgn_pad"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/vehicle_purchased_price" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            tools:ignore="RtlHardcoded" />
+
+                        <ImageView
+                            style="@style/imgvw_normal"
+                            android:layout_alignParentRight="true"
+                            android:contentDescription="@string/drop_down"
+                            android:src="@drawable/ic_down_key_fill"
+                            android:visibility="gone"
+                            tools:ignore="RtlHardcoded" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/view_horizantal_heightwrapcontent"
+                        android:background="#eae8e8" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_Seven"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout style="@style/Ll_normal_htl">
+
+                            <android.support.design.widget.TextInputLayout style="@style/textinputlaout_wmatch_hwrap">
+
+                                <EditText
+                                    android:id="@+id/ed_Veh_Pur_Price"
+                                    style="@style/edittext_normal"
+                                    android:hint="@string/vehicle_purchased_price"
+                                    android:inputType="number" />
+
+
+                            </android.support.design.widget.TextInputLayout>
+
+
+                        </LinearLayout>
+
+
+                        <android.support.v7.widget.CardView
+                            style="@style/cardViewStyle"
+                            android:layout_margin="@dimen/dp5"
+                            app:cardCornerRadius="@dimen/dp5"
+                            app:cardElevation="@dimen/dp5">
+
+                            <LinearLayout style="@style/Ll_normal_vtl">
+
+                                <LinearLayout
+                                    style="@style/Ll_normal_htl"
+                                    android:baselineAligned="false">
+
+
+                                    <LinearLayout
+                                        style="@style/Ll_weight_htl"
+                                        android:background="@drawable/card_shape">
+
+                                        <TextView
+                                            style="@style/tv_weight_normal"
+                                            android:text="@string/loan_details_if_any"
+                                            tools:ignore="NestedWeights,TooDeepLayout" />
+
+                                        <Switch style="@style/tv_weight_normal"
+                                            android:id="@+id/sw_Veh_Pur"/>
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout style="@style/Ll_normal_htl">
+
+                                    <android.support.design.widget.TextInputLayout style="@style/textinputlaout_wmatch_hwrap">
+
+                                        <EditText
+                                            android:id="@+id/ed_Veh_Pur_BankName"
+                                            style="@style/edittext_normal"
+                                            android:hint="@string/bank_name" />
+
+
+                                    </android.support.design.widget.TextInputLayout>
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    style="@style/Ll_normal_htl"
+                                    android:baselineAligned="false">
+
+                                    <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                        <EditText
+                                            android:id="@+id/ed_Veh_Pur_LoanAccountNo"
+                                            style="@style/edittext_normal"
+                                            android:hint="@string/loan_account_number"
+                                            android:inputType="number" />
+
+
+                                    </android.support.design.widget.TextInputLayout>
+
+                                    <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                        <EditText
+                                            android:id="@+id/ed_Veh_Pur_LoanAmount"
+                                            style="@style/edittext_normal"
+                                            android:hint="@string/loan_amount"
+                                            android:inputType="number" />
+
+
+                                    </android.support.design.widget.TextInputLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/Ll_normal_htl"
+                                    android:baselineAligned="false">
+
+                                    <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                        <EditText
+                                            android:id="@+id/ed_Veh_Pur_LoanInstRate"
+                                            style="@style/edittext_normal"
+                                            android:hint="@string/loan_interest_rate"
+                                            android:inputType="number" />
+
+
+                                    </android.support.design.widget.TextInputLayout>
+
+                                    <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                        <EditText
+                                            android:id="@+id/ed_Veh_Pur_DownPay"
+                                            style="@style/edittext_normal"
+                                            android:hint="@string/down_payment"
+                                            android:inputType="number" />
+
+
+                                    </android.support.design.widget.TextInputLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout style="@style/Ll_normal_htl">
+
+                                    <RelativeLayout
+                                        style="@style/Rl_htl_weight"
+                                        android:layout_margin="@dimen/dp5"
+                                        android:background="@drawable/shape6">
+
+
+                                        <EditText
+                                            android:id="@+id/ed_Veh_Pur_RegDate"
+                                            style="@style/tv_normal"
+                                            android:layout_centerVertical="true"
+                                            android:background="@null"
+                                            android:focusable="false"
+                                            android:inputType="text"
+                                            android:padding="@dimen/dp5"
+                                            android:hint="@string/registered_date"
+                                            tools:ignore="LabelFor" />
+
+                                        <ImageView
+                                            style="@style/imgvw_normal"
+                                            android:layout_height="34dp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_margin="@dimen/dp1"
+                                            android:background="@drawable/img_bg"
+                                            android:contentDescription="@string/time"
+                                            android:padding="@dimen/dp5"
+                                            android:src="@drawable/ic_date_range_black_24dp"
+                                            tools:ignore="RtlHardcoded" />
+
+
+                                    </RelativeLayout>
+
+
+                                    <RelativeLayout
+                                        style="@style/Rl_htl_weight"
+                                        android:layout_margin="@dimen/dp5"
+                                        android:background="@drawable/shape6">
+
+
+                                        <EditText
+                                            android:id="@+id/ed_Veh_Pur_Date"
+                                            style="@style/tv_normal"
+                                            android:layout_centerVertical="true"
+                                            android:background="@null"
+                                            android:focusable="false"
+                                            android:inputType="text"
+                                            android:padding="@dimen/dp5"
+                                            android:hint="@string/purchase_date"
+                                            tools:ignore="LabelFor" />
+
+                                        <ImageView
+                                            style="@style/imgvw_normal"
+                                            android:layout_height="34dp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_margin="@dimen/dp1"
+                                            android:background="@drawable/img_bg"
+                                            android:contentDescription="@string/time"
+                                            android:padding="@dimen/dp5"
+                                            android:src="@drawable/ic_date_range_black_24dp"
+                                            tools:ignore="RtlHardcoded" />
+
+
+                                    </RelativeLayout>
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    style="@style/Ll_normal_htl"
+                                    android:baselineAligned="false">
+
+                                    <RelativeLayout
+                                        style="@style/Rl_htl_weight"
+                                        android:layout_margin="@dimen/dp5"
+                                        android:background="@drawable/shape6">
+
+
+                                        <EditText
+                                            android:id="@+id/ed_Veh_Pur_LoanEndDate"
+                                            style="@style/tv_normal"
+                                            android:layout_centerVertical="true"
+                                            android:background="@null"
+                                            android:focusable="false"
+                                            android:inputType="text"
+                                            android:padding="@dimen/dp5"
+                                            android:hint="@string/loan_end_date"
+                                            tools:ignore="LabelFor" />
+
+                                        <ImageView
+                                            style="@style/imgvw_normal"
+                                            android:layout_height="34dp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_margin="@dimen/dp1"
+                                            android:background="@drawable/img_bg"
+                                            android:contentDescription="@string/time"
+                                            android:padding="@dimen/dp5"
+                                            android:src="@drawable/ic_date_range_black_24dp"
+                                            tools:ignore="RtlHardcoded" />
+
+
+                                    </RelativeLayout>
+
+                                    <android.support.design.widget.TextInputLayout style="@style/textinputlaout_weight">
+
+                                        <EditText
+                                            android:id="@+id/ed_Veh_Pur_LoanEMI"
+                                            style="@style/edittext_normal"
+                                            android:hint="@string/loan_emi_amount"
+                                            android:inputType="text|number" />
+
+                                    </android.support.design.widget.TextInputLayout>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <!--other expenses-->
+
+
+            <android.support.v7.widget.CardView
+                style="@style/cardViewStyle"
+                android:layout_margin="@dimen/dp5"
+                app:cardCornerRadius="@dimen/dp5"
+                app:cardElevation="@dimen/dp5">
+
+                <LinearLayout style="@style/Ll_normal_vtl">
+
+                    <LinearLayout
+                        style="@style/Ll_normal_htl"
+                        android:baselineAligned="false">
+
+
+                        <LinearLayout
+                            style="@style/Ll_weight_htl"
+                            android:background="@drawable/card_shape">
+
+                            <TextView
+                                style="@style/tv_weight_normal"
+                                android:text="@string/other_expenses_if_second_hand"
+                                tools:ignore="NestedWeights" />
+
+                            <Switch
+                                android:id="@+id/sw_OtherExp"
+                                style="@style/tv_weight_normal"
+                                android:layout_weight="0.5" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/Ll_normal_htl">
+
+                        <android.support.design.widget.TextInputLayout style="@style/textinputlaout_wmatch_hwrap">
+
+                            <EditText
+                                android:id="@+id/ed_Other_BankName"
+                                style="@style/edittext_normal"
+                                android:hint="@string/bank_name" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/Ll_normal_htl"
+                        android:baselineAligned="false">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight">
+
+                            <EditText
+                                android:id="@+id/ed_Other_MainAmount"
+                                style="@style/edittext_normal"
+                                android:hint="@string/maintenance_amount"
+                                android:inputType="number" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/textinputlaout_weight">
+
+                            <EditText
+                                android:id="@+id/ed_Other_Reparing_No"
+                                style="@style/edittext_normal"
+                                android:hint="@string/repairing_charges"
+                                android:inputType="number" />
+
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.CardView
+                        style="@style/cardViewStyle"
+                        android:layout_height="@dimen/dp80"
+                        android:layout_margin="@dimen/dp5"
+                        app:cardCornerRadius="@dimen/dp5"
+                        app:cardElevation="@dimen/dp5">
+
+
+                        <EditText
+                            android:id="@+id/ed_Other_Remarks"
+                            style="@style/edittext_normal"
+                            android:background="@color/white"
+                            android:hint="@string/reamarks"
+                            android:textSize="@dimen/sp14" />
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                style="@style/tv_normal"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp8"
+                android:background="@drawable/attachment_green">
+
+                <ImageView
+                    android:id="@+id/img_financedoc_attachfile"
+                    style="@style/imgvw_normal"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:contentDescription="@string/choose_image"
+                    android:padding="@dimen/dp5"
+                    android:src="@drawable/ic_attachment_icon" />
+
+                <TextView
+                    style="@style/tv_normal"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img_financedoc_attachfile"
+                    android:padding="@dimen/dp3"
+                    android:text="Loan Documents"
+                    android:textColor="@color/white"
+                    tools:ignore="RtlHardcoded,TooManyViews" />
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerfinancialdetails"
+                style="@style/recyclerViewStyle" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
