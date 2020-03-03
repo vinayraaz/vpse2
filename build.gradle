@@ -20,6 +20,9 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url  'http://dl.bintray.com/elemyntic/android'
+        }
         maven { url 'https://jitpack.io' }
     }
 }

@@ -1,4 +1,4 @@
-package in.varadhismartek.patashalaerp.DashboardModule.TransportModule;
+package in.varadhismartek.patashalaerp.TransportModule;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -476,7 +476,7 @@ Switch sw_Service,sw_Insurance,sw_OtherExp,sw_Veh_Pur,sw_Fitness;
         str_sw_OtherExp = "true";
 
 
-        System.out.println("Res*Error******1"+Constant.SCHOOL_ID);
+        System.out.println("Res*Error******1"+ Constant.SCHOOL_ID);
         System.out.println("Res*Error******2"+ str_ed_regNo+"**"+ str_ed_GpsDetails+"**"+ str_body_type+"**"+
                 str_ed_ChasisNo+"**"+ str_ed_EngineNo+"**"+ str_ed_makerName+"**"+ str_ed_ModelNo+"**"+ str_ed_ManuYear+"**"+
                 str_ed_SeatCapacity+"**"+ str_ed_RegAutho+"**"+ str_ed_RegState+"**"+ str_ed_RegisteredDate+"**"+ str_ed_PurchaseDate);

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "in.varadhismartek.patashalaerp"
-        minSdkVersion 17
+        minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -26,6 +26,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.google.firebase:firebase-database:11.0.4'
     implementation 'com.google.firebase:firebase-storage:11.0.4'
+    implementation 'com.jmedeisis:draglinerlayout:1.1.1'
 
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'com.opencsv:opencsv:3.9'

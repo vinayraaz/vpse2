@@ -1,4 +1,4 @@
-package in.varadhismartek.patashalaerp.DashboardModule.TransportModule;
+package in.varadhismartek.patashalaerp.TransportModule;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 

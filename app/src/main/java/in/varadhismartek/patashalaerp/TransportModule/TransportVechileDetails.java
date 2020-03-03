@@ -1,4 +1,4 @@
-package in.varadhismartek.patashalaerp.DashboardModule.TransportModule;
+package in.varadhismartek.patashalaerp.TransportModule;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

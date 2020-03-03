@@ -1,14 +1,11 @@
-package in.varadhismartek.patashalaerp.DashboardModule.TransportModule;
+package in.varadhismartek.patashalaerp.TransportModule;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import in.varadhismartek.Utils.Constant;
-import in.varadhismartek.patashalaerp.DashboardModule.Syllabus.AddSyllabusFragment;
-import in.varadhismartek.patashalaerp.DashboardModule.Syllabus.SyllabusInboxFragment;
-import in.varadhismartek.patashalaerp.DashboardModule.Syllabus.SyllabusViewFragment;
 import in.varadhismartek.patashalaerp.R;
 
 public class TransportActivity extends AppCompatActivity {

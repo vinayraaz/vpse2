@@ -191,7 +191,7 @@ public class Fragment_Dashboard extends Fragment implements View.OnClickListener
                 getActivity().startActivity(intent);
                 break;
             case R.id.edit_setting:
-                Intent intentEdit = new Intent(getActivity(), SettingActivity.class);
+                Intent intentEdit = new Intent(getActivity(), SettingActivityNew.class);
                 getActivity().startActivity(intentEdit);
                 break;
 

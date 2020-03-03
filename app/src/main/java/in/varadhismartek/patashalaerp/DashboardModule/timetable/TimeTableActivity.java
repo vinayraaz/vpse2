@@ -829,12 +829,16 @@ public class TimeTableActivity extends AppCompatActivity {
 
 
                                 for (int j = 0; j < listHashMap.get(keyData).size(); j++) {
-                                    if ((keyData.equalsIgnoreCase("Mon") && tableModels.get(j).getDayInitial().equalsIgnoreCase("Mon"))) {
+                                    String strStatTime = listHashMap.get(keyData).get(j).getStartTime();
+                                    timeConvert = getTime(strStatTime);
+                                    System.out.println("Sub***1AAA*" + timeConvert + "**" + tableModels.get(j).getStart_time() + "**" + tableModels.get(j).getSubject());
+                                    System.out.println("Date**2*" + listHashMap.get(keyData).get(j).getStartTime());
+                                    System.out.println("Date**2*" + listHashMap.get(keyData).get(j).getTypeOfPeriod());
+
+
+                                    if ((keyData.equalsIgnoreCase("Mon") && tableModels.get(j).getDayInitial().equalsIgnoreCase("Mon"))
+                                    && (timeConvert.equalsIgnoreCase(tableModels.get(j).getStart_time()))) {
                                         // System.out.println("Sub***1A*" + tableModels.get(j).getSubject()+"**"+ tableModels.get(j).getStart_time());
-                                        System.out.println("Date**2*" + listHashMap.get(keyData).get(j).getStartTime());
-                                        System.out.println("Date**2*" + listHashMap.get(keyData).get(j).getTypeOfPeriod());
-                                        String strStatTime = listHashMap.get(keyData).get(j).getStartTime();
-                                        timeConvert = getTime(strStatTime);
 
                                         System.out.println("Sub***1B*" + timeConvert + "**" + tableModels.get(j).getStart_time() + "**" + tableModels.get(j).getSubject());
 
